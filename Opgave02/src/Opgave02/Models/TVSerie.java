@@ -2,22 +2,16 @@ package Opgave02.Models;
 
 import java.util.ArrayList;
 
-public class TVSerie {
-    private String title;
+public class TVSerie extends Medie{
     private int numberOfSeasons;
-    private Genre[] genres;
-    private ArrayList<Actor> cast;
 
-    public TVSerie(String title, int numberOfSeasons, Genre[] genres, ArrayList<Actor> cast) {
-        this.title = title;
+    public TVSerie(String title, ArrayList<Actor> cast, Genre[] genres, int numberOfSeasons) {
+        super(title, cast, genres);
         this.numberOfSeasons = numberOfSeasons;
-        this.genres = genres;
-        this.cast = cast;
     }
 
+    @Override
     public String toString() {
-        return title;
+        return super.toString();
     }
-
-
 }

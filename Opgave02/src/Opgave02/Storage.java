@@ -1,6 +1,7 @@
 package Opgave02.Storage;
 
 import Opgave02.Models.Actor;
+import Opgave02.Models.Director;
 import Opgave02.Models.Movie;
 import Opgave02.Models.TVSerie;
 
@@ -23,7 +24,24 @@ public class Storage {
         series.add(serie);
     }
 
-    public void testMethod() {
+    public void printAllMoviesAndSeries() {
+        for (Movie movie : movies) {
+            System.out.println(movie);
+        }
 
+        for (TVSerie tvSerie : series) {
+            System.out.println(tvSerie);
+        }
+    }
+
+    public ArrayList<Movie> findMoviesWithDirector(Director director) {
+        ArrayList<Movie> directorMovies = new ArrayList<>();
+
+        for (Movie movie : this.movies) {
+            if (movie.getDirector().equals(director)) {
+                directorMovies.add(movie);
+            }
+        }
+        return directorMovies;
     }
 }

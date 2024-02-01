@@ -10,6 +10,7 @@ import java.util.List;
 public class Test {
     public static void main(String[] args) {
         Storage storage = initStorage();
+        storage.printAllMoviesAndSeries();
     }
 
     private static Storage initStorage() {
@@ -36,19 +37,26 @@ public class Test {
         storage.addActor(perry);
         Actor schwimmer = new Actor("David Schwimmer", LocalDate.of(1966, 11, 2));
         storage.addActor(schwimmer);
-        Movie starWars = new Movie("Star Wars", 1977, georgeLukas,
-                new Genre[]{Genre.ACTION, Genre.FANTACY, Genre.ADVENTURE}, 8.6,
-                new ArrayList<>(List.of(ford, hamill, fisher)));
+        Movie starWars = new Movie("Star Wars",new ArrayList<>(List.of(ford, hamill, fisher))
+                ,new Genre[]{Genre.ACTION, Genre.FANTACY, Genre.ADVENTURE}
+                ,1977, georgeLukas
+                , 8.6
+                );
 
-        Movie indy = new Movie("Raiders of the Lost Ark", 1981, spielberg,
-                new Genre[]{Genre.ACTION, Genre.ADVENTURE}, 8.4,
-                new ArrayList<>(List.of(ford, allan)));
-        TVSerie friends = new TVSerie("Friends", 11,
-                new Genre[] { Genre.COMEDY, Genre.ROMANCE},
-                new ArrayList<>(List.of(aniston, cox, kudrow, leBlanc, perry, schwimmer)));
+        Movie indy = new Movie("Raiders of the Lost Ark", new ArrayList<>(List.of(ford, allan)),
+                new Genre[]{Genre.ACTION, Genre.ADVENTURE}
+                ,1981, spielberg
+                , 8.4);
+
+        TVSerie friends = new TVSerie("Friends",new ArrayList<>(List.of(aniston, cox, kudrow, leBlanc, perry, schwimmer))
+                ,new Genre[] { Genre.COMEDY, Genre.ROMANCE}
+                , 11
+                );
+
         storage.addMovie(starWars);
         storage.addMovie(indy);
         storage.addTVSerie(friends);
+        System.out.println(storage.findMoviesWithDirector(spielberg));
         return storage;
     }
 }
