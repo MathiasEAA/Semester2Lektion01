@@ -1,4 +1,4 @@
-package Models;
+package Opgave02.Models;
 
 import java.util.ArrayList;
 

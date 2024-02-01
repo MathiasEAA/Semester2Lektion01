@@ -1,8 +1,8 @@
-package Storage;
+package Opgave02.Storage;
 
-import Models.Actor;
-import Models.Movie;
-import Models.TVSerie;
+import Opgave02.Models.Actor;
+import Opgave02.Models.Movie;
+import Opgave02.Models.TVSerie;
 
 import java.util.ArrayList;
 

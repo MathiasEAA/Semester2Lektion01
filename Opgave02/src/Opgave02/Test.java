@@ -1,9 +1,10 @@
-import Models.*;
-import Storage.Storage;
+package Opgave02;
+
+import Opgave02.Models.*;
+import Opgave02.Storage.Storage;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Test {
