@@ -22,4 +22,8 @@ public class Storage {
     public void addTVSerie(TVSerie serie) {
         series.add(serie);
     }
+
+    public void testMethod() {
+
+    }
 }
