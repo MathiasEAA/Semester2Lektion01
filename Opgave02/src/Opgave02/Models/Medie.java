@@ -1,6 +1,7 @@
 package Opgave02.Models;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Medie {
 
@@ -16,5 +17,9 @@ public class Medie {
 
     protected String getTitle() {
         return title;
+    }
+
+    public ArrayList<Genre> getGenre() {
+        return new ArrayList<Genre>(List.of(genres));
     }
 }

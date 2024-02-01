@@ -56,7 +56,11 @@ public class Test {
         storage.addMovie(starWars);
         storage.addMovie(indy);
         storage.addTVSerie(friends);
-        System.out.println(storage.findMoviesWithDirector(spielberg));
+        storage.addMedie(starWars);
+        storage.addMedie(indy);
+        storage.addMedie(friends);
+        System.out.println("Spielberg movies: " + storage.findMoviesWithDirector(spielberg));
+        System.out.println("Medier with genre: " + storage.seriesWithGenre(new ArrayList<>(List.of(Genre.ACTION, Genre.ROMANCE))));
         return storage;
     }
 }

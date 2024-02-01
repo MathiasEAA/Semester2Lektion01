@@ -12,6 +12,6 @@ public class TVSerie extends Medie{
 
     @Override
     public String toString() {
-        return super.toString();
+        return super.getTitle();
     }
 }
