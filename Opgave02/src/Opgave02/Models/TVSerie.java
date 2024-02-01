@@ -14,4 +14,10 @@ public class TVSerie {
         this.genres = genres;
         this.cast = cast;
     }
+
+    public String toString() {
+        return title;
+    }
+
+
 }

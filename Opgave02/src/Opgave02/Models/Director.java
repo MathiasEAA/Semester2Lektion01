@@ -10,4 +10,8 @@ public class Director {
         this.name = name;
         this.birthday = birthday;
     }
+
+    public String toString() {
+        return name;
+    }
 }
